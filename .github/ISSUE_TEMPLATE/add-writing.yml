@@ -1,0 +1,25 @@
+name: Add writing
+description: Suggest an essay, talk, or note about capability negotiation
+title: "Add writing: "
+labels: ["writing"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs on this list
+      description: One or two sentences. Say which part teaches the request-and-review gate.
+    validations:
+      required: true

@@ -1,0 +1,17 @@
+name: Question or spec comment
+description: Ask about the pattern, or argue with the draft spec
+title: "Question: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you want to know or change?
+      description: If this is about SPEC.md, name the field or the section.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Optional. A client, a server, or a sentence in the README that prompted this.

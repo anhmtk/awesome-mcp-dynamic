@@ -1,0 +1,67 @@
+name: Add a server
+description: Propose an MCP server that lets an agent name a missing capability
+title: "Add server: "
+labels: ["server"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. The list is small on purpose. Read the [inclusion bar](https://github.com/anhmtk/awesome-mcp-dynamic/blob/main/CONTRIBUTING.md) and the [spec](https://github.com/anhmtk/awesome-mcp-dynamic/blob/main/SPEC.md). A pull request with the bullet already written is welcome too.
+
+        If the server builds a tool from the request and runs it, say so in the review field. Those projects are not added. The issue stays up so the boundary stays visible.
+  - type: input
+    id: name
+    attributes:
+      label: Server name
+      placeholder: Example MCP
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Public URL
+      description: Homepage, docs, or repository. A stranger must be able to open it.
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Tool name or HTTP route
+      description: Example request_capability, or POST /v1/capabilities
+      placeholder: request_capability
+    validations:
+      required: true
+  - type: textarea
+    id: schema
+    attributes:
+      label: Where the five fields are documented
+      description: Link, or paste the field names the server actually accepts.
+      placeholder: capability, desired_input, desired_output, why_insufficient, budget_usd
+    validations:
+      required: true
+  - type: dropdown
+    id: review
+    attributes:
+      label: Who reviews a request before any new tool exists?
+      options:
+        - A person
+        - A public policy that does not run client-supplied code
+        - The server builds or runs a tool from the request itself
+    validations:
+      required: true
+  - type: textarea
+    id: gates
+    attributes:
+      label: Auth, rate limit, and price
+      description: Write "none" where a gate is absent. Agents need this before they call.
+      placeholder: API key optional. No charge. 10 requests per hour per IP.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example request and acknowledgement
+      description: Realistic JSON is enough. Remove secrets.
+    validations:
+      required: true

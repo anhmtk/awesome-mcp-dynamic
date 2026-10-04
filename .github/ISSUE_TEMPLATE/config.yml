@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Negotiation spec (draft 0.1)
+    url: https://github.com/anhmtk/awesome-mcp-dynamic/blob/main/SPEC.md
+    about: The five fields a request carries, and what the server returns.
+  - name: How to send a pull request
+    url: https://github.com/anhmtk/awesome-mcp-dynamic/blob/main/CONTRIBUTING.md
+    about: Inclusion bar, writing style, and the review process.
